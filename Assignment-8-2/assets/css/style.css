@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff3e3e;
+    margin-bottom: 2rem;
+  }
+  
+  .scanner-container {
+    width: 60vw;
+    height: 80px;
+    position: relative;
+    background: #000;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .lights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   
+    align-items: center;
+    gap: 5px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .light {
+
+    width: 150px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: background-color 0.15s ease;
+  }
+  
+  .light.active {
+    background: #f00;
+    box-shadow: 
+      0 0 10px #f00,
+      0 0 20px #f00,
+      0 0 30px #f00;
+  }
+  
+  .scanner-line {
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 0, 0, 0.5),
+      transparent
+    );
+    z-index: 2;
+    display: none;
+  }
+  
+  .controls {
+    margin-top: 2rem;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    background: #ff3e3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #ff6b6b;
+  }
+  
+  button:disabled {
+    background: #666;
+    cursor: not-allowed;
+  }
+
+  #light1, #light7 {
+    display: none;
+  }
